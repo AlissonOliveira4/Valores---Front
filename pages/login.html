@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <img src="../images/voltar.webp" alt="voltar" id="voltar" onclick="location.href='index.html'">
+    </header>
+    <form class="grupo" onsubmit="saveUser()">
+            <div class="login">
+                <label for="nome">Digite seu apelido:</label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+        <button type="sumbit" onclick="location.href='determinacao.html'">Próximo</button>   
+    </form>
+    
+    <script src="../scripts/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Humildade</title>
+</head>
+<body>
+    <header>
+        <div class="temporizador">10:00</div>
+        <h3>Valores J&F</h3>
+    </header>
+    
+    <form class="grupo" onsubmit="acertou()">
+        <div id="valor">
+            <img src="../images/humildade.png" alt="determinação">
+            <h1>Humildade</h1>
+            <img src="../images/humildade.png" alt="determinação">
+        </div>        <p>É uma pessoa que sabe ouvir, é atenciosa, considera a opinião dos outros, e não tem vergonha de perguntar nem de dizer que não sabe.</p>
+        <ul id="escolha">
+            <li id="a" class="errada" onclick="changeBorder(this)">Culpa os outros pelos seus erros</li>
+            <li id="b" class="correta" onclick="changeBorder(this)">Valoriza a equipe, reconhecendo que é parte do todo</li>
+            <li id="c" class="correta" onclick="changeBorder(this)">Não prioriza o "eu", mas sim o "nós"</li>
+            <li id="d" class="correta" onclick="changeBorder(this)">Assume erros e se desculpa, quando está errado.</li>
+            <li id="e" class="errada" onclick="changeBorder(this)">Confunde humildade com inferioridade, rebaixando-se em relação aos outros</li>
+        </ul>
+        <button type="submit" id="botao" class="simplicidade">Próximo</button>
+    </form>
+
+    <div class="overlay hidden" id="overlay">
+        <div class="overlay-content">
+            <div class="imagem hidden" id="falha">
+                <img src="../images/falha.png" alt="falha">
+            </div>
+            <div class="imagem hidden" id="sucesso">
+                <img src="../images/sucesso.png" alt="sucesso">
+            </div>
+            <p>Quando estamos em algum debate, mesmo que não concordamos com a opinião do outro, sabemos ouvir e considerar a opinião dos outros.</p>
+        </div>
+    </div>
+
+
+    <script src="../scripts/valores.js"></script>
+</body>
+</html>

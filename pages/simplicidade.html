@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Simplicidade</title>
+</head>
+<body>
+    <header>
+        <div class="temporizador">10:00</div>
+        <h3>Valores J&F</h3>
+    </header>
+    
+    <form class="grupo" onsubmit="acertou()">
+        <div id="valor">
+            <img src="../images/simplicidade.png" alt="determinação">
+            <h1>Simplicidade</h1>
+            <img src="../images/simplicidade.png" alt="determinação">
+        </div>
+        <p>Faz as coisas acontecerem de forma simples e prática, é mão na massa, vai direto ao ponto, descomplica e desburocratiza respeitando as normas.</p>
+        <ul id="escolha">
+            <li id="a" class="correta" onclick="changeBorder(this)">Vai direto ao ponto e descomplica as coisas, respeitando as normas.</li>
+            <li id="b" class="correta" onclick="changeBorder(this)">Sabe fazer e responder às perguntas, sem “enrolação”</li>
+            <li id="c" class="errada" onclick="changeBorder(this)">Procura soluções mirabolantes, quando poderia fazer de forma mais simples</li>
+            <li id="d" class="correta" onclick="changeBorder(this)">Praticidade para compreender, resolver problemas</li>
+            <li id="e" class="errada" onclick="changeBorder(this)">Valoriza os problemas e não busca soluções</li>
+        </ul>
+        <button type="submit" id="botao" class="disciplina">Próximo</button>
+    </form>
+
+    <div class="overlay hidden" id="overlay">
+        <div class="overlay-content">
+            <div class="imagem hidden" id="falha">
+                <img src="../images/falha.png" alt="falha">
+            </div>
+            <div class="imagem hidden" id="sucesso">
+                <img src="../images/sucesso.png" alt="sucesso">
+            </div>
+            <p>Você quando está fazendo algo, sempre procurando a forma mais simples de fazer, sem perder a qualidade.</p>
+        </div>
+    </div>
+
+    <script src="../scripts/valores.js"></script>
+</body>
+</html>

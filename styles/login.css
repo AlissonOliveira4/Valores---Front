@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,700;1,700&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    background-color: #11C76F;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    width: 75px;
+
+    #voltar{
+        height: 50px;
+        width: 60px;
+        margin: 10px;
+        border-radius: 50%; /* transforma o quadrado em círculo */
+        background-color: white;
+        background-size: cover; /* ajusta a imagem para cobrir todo o círculo */
+        background-position: end; /* centraliza a imagem no círculo */
+        border: 2px solid #000; /* opcional: borda ao redor do círculo */
+    }
+
+}
+
+.grupo{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .login{
+
+        display: flex;
+        width: 40%;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+        margin: 30px;
+        background-color: #426B1F;
+        border: 3px solid white;
+        border-radius: 15px;
+        flex-wrap: wrap;
+
+        label{
+            text-align: center;
+            background-color: #426B1F;
+            margin-right: 20px;
+        }
+    }
+
+    button{
+        height: 50px;
+        width: 200px;
+        margin: 30px;
+        border-radius: 10px;
+        border: none;
+        background-color: #426B1F;
+    }
+}

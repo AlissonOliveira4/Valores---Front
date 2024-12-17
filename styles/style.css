@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,700;1,700&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    background-color: #11C76F;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+
+    #voltar{
+        height: 30px;
+        width: 40px;
+        border-radius: 50%; /* transforma o quadrado em círculo */
+        background-color: white;
+        background-image: url('../images/voltar.webp');
+        background-size: cover; /* ajusta a imagem para cobrir todo o círculo */
+        background-position: end; /* centraliza a imagem no círculo */
+        border: 2px solid #000; /* opcional: borda ao redor do círculo */
+    }
+
+}
+
+.grupo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    #valor{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        h1{
+            display: flex;
+            width: 300px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+            margin: 15px;
+            background-color: #426B1F;
+            border: 3px solid white;
+            border-radius: 15px;
+        }
+
+        img{
+            width: 12%;
+            height: 50%;
+        }
+    }
+    
+
+    p{
+        margin: 15px;
+        display: flex;
+        font-size: 24px;
+        width: 65%;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        width: 80%;
+        margin: 15px;
+
+        li{
+            display: flex;
+            width: 150px;
+            height: 200px;
+            text-align: center;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 15px;
+            margin: 25px;
+        }
+
+        #a{
+            background-color: red;
+        }
+
+        #b{
+            background-color: gray
+        }
+
+        #c{
+            background-color: green;
+        }
+
+        #d{
+            background-color: blue;
+        }
+
+        #e{
+            background-color: orangered;
+        }
+    }
+
+    button{
+        height: 50px;
+        width: 200px;
+        border-radius: 10px;
+        border: none;
+        background-color: #426B1F;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: white;
+        color: #426B1F;
+        border: 2px solid #426B1F;
+    }
+}
+
+.highlight {
+    border-color: yellow;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha o conteúdo no topo */
+    z-index: 1000;
+    overflow-y: auto; /* Permite rolar o conteúdo no eixo vertical */
+    padding: 20px; /* Espaço para evitar cortes nos lados */
+}
+
+
+.overlay-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    box-sizing: border-box;
+
+    .imagem{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        img{
+            background-color: white;
+            width: 20%;
+        }
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    p{
+        display: flex;
+        font-size: 18px;
+        background-color: white;
+        color: #11C76F;
+        padding: 20px;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 15px;        
+    }
+}
+
+
+.hidden{
+    display: none;
+}

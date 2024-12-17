@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/index.css">
+    <title>Jogo Valores J&F</title>
+</head>
+<body>
+    <nav>
+        <img src="../images/picpay.png" alt="picpay" id="picpay" >
+        <div class="info">
+            <button data-overlay="tutorialOverlay">Tutorial</button>
+            <button data-overlay="regrasOverlay">Regras</button>
+            <button data-overlay="rankingOverlay">Ranking</button>
+        </div>
+    </nav>
+    <div class="principal">
+        <h1>Jogo Valores J&F</h1>
+        <p><strong>Jogo focado em reforçar os valores da J&F, de forma criativa e divertida.</strong></p>
+        <button onclick="location.href='login.html'">Começar o jogo</button>
+    </div>
+
+    <div id="tutorialOverlay" class="overlay hidden">
+        <div class="overlay-content">
+            <h3>Tutorial</h3>
+            <p>Antes de começar o jogo devemos ler as regras para assim termos uma melhor experiência nele</p><br>
+            <img src="../images/tela1.png" alt="tela1">
+            <p>Após terminar de ler as regras clique no botão fechar para voltar ao menu</p><br>
+            <img src="../images/tela2.png" alt="tela2">
+            <p>Em seguida, clique no botão “Começar o jogo” para assim dar início ao jogo</p><br>
+            <img src="../images/tela3.png" alt="tela3">
+            <p>Depois de ter clicado nesse botão, você será redirecionado para a tela de login, aonde deve colocar seu apelido no jogo</p><br>
+            <img src="../images/tela4.png" alt="tela4">
+            <p>Agora estando no jogo, você deve selecionar 3 atributos corretos de cada valor para ganhar pontos</p><br>
+            <img src="../images/tela5.png" alt="tela5">
+            <p>Ao final do jogo você receberá um feedback do seu desempenho, conforme os seus pontos ganhos ao decorrer do jogo</p><br>
+            <img src="../images/tela6.png" alt="tela6">
+            <p>Clicando no botão de “Retornar ao menu”, será redirecionado para a página inicial, voltando ao início do jogo</p><br>
+            <button class="closeOverlay">Fechar</button>
+        </div>
+    </div>
+
+    <div id="regrasOverlay" class="overlay hidden">
+        <div class="overlay-content">
+            <h3>Regras</h3>
+            <p>
+                1° - O quiz tem que ser feito individualmente.<br><br>
+                2° - Só pode selecionar no máximo 3 repostas de cada valor.<br><br>
+                3° - Digite seu apelido antes de ir para o jogo!<br><br>
+                4° - Não é permitido utilizar fontes externas, apenas o seu conhecimento.<br><br>
+                5° - É estritamente proibido o uso dO inspecionar das páginas do jogo!<br><br>
+                6° - O jogo só tem 10 minutos, então seja rápido. <br>
+            </p>
+            <button class="closeOverlay">Fechar</button>
+        </div>
+    </div>
+
+    <div id="rankingOverlay" class="overlay hidden">
+        <div class="overlay-content">
+            <h3>Ranking</h3>
+            <p>
+                1° - Não sei<br><br>
+                2° - Sei<br><br>
+                3° - Não lembro<br><br>
+                4° - Certeza <br>
+            </p>
+            <button class="closeOverlay">Fechar</button>
+        </div>
+    </div>
+
+    <script src="../scripts/inicio.js"></script>
+
+</body>
+</html>

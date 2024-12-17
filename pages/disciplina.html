@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Disciplina</title>
+</head>
+<body>
+    <header>
+        <div class="temporizador">10:00</div>
+        <h3>Valores J&F</h3>
+    </header>
+    
+    <form class="grupo" onsubmit="acertou()">
+        <div id="valor">
+            <img src="../images/disciplina.png" alt="determinação">
+            <h1>Disciplina</h1>
+            <img src="../images/disciplina.png" alt="determinação">
+        </div>
+        <p>É uma pessoa que cumpre o combinado, é pontual com horário e seus compromissos. Executa suas tarefas de forma disciplinada.</p>
+        <ul id="escolha">
+            <li id="a" class="correta" onclick="changeBorder(this)">Cumpre o combinado, respeita regras e horários, é pontual</li>
+            <li id="b" class="correta" onclick="changeBorder(this)">Otimiza o tempo, atividades e recursos</li>
+            <li id="c" class="errada" onclick="changeBorder(this)">Apresenta descuido com sua saúde física e mental</li>
+            <li id="d" class="correta" onclick="changeBorder(this)">Tem postura adequada, de acordo com a especificidade de cada situação</li>
+            <li id="e" class="errada" onclick="changeBorder(this)">Apresenta desorganização pessoal e com o ambiente</li>
+        </ul>
+        <button type="submit" id="botao" class="atitudeDeDono">Próximo</button>
+    </form>
+
+    <div class="overlay hidden" id="overlay">
+        <div class="overlay-content">
+            <div class="imagem hidden" id="falha">
+                <img src="../images/falha.png" alt="falha">
+            </div>
+            <div class="imagem hidden" id="sucesso">
+                <img src="../images/sucesso.png" alt="sucesso">
+            </div>
+            <p>Ter uma rotina organizada para otimizar melhor o tempo e não se perder nas atividades do dia a dia.</p>
+        </div>
+    </div>
+
+    <script src="../scripts/valores.js"></script>
+</body>
+</html>

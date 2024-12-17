@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Atitude de dono</title>
+</head>
+<body>
+    <header>
+        <div class="temporizador">10:00</div>
+        <h3>Valores J&F</h3>
+    </header>
+    
+    <form class="grupo" onsubmit="acertou()">
+        <div id="valor">
+            <img src="../images/atitudededono.webp" alt="determinação">
+            <h1>Atitude de Dono</h1>
+            <img src="../images/atitudededono.webp" alt="determinação">
+        </div>
+        <p>É uma pessoa comprometida com o resultado, conhece com profundidade aquilo que faz e busca sempre ser o melhor naquilo que faz e não desiste nunca.</p>
+        <ul id="escolha">
+            <li id="a" class="correta" onclick="changeBorder(this)">Toma responsabilidades para si, tomando a frente</li>
+            <li id="b" class="errada" onclick="changeBorder(this)">Realiza pré-julgamentos e é desrespeitoso ao falar</li>
+            <li id="c" class="errada" onclick="changeBorder(this)">Manifesta críticas desnecessárias</li>
+            <li id="d" class="correta" onclick="changeBorder(this)">Dá o melhor de si, ainda que a situação pareça fácil</li>
+            <li id="e" class="correta" onclick="changeBorder(this)">Abraça os desafios com afinco, dedicação e foco</li>
+        </ul>
+        <button type="submit" id="botao" class="final">Próximo</button>
+    </form>
+
+    <div class="overlay hidden" id="overlay">
+        <div class="overlay-content">
+            <div class="imagem hidden" id="falha">
+                <img src="../images/falha.png" alt="falha">
+            </div>
+            <div class="imagem hidden" id="sucesso">
+                <img src="../images/sucesso.png" alt="sucesso">
+            </div>
+            <p>Quando estiver em algum trabalho em grupo, buscar tomar a frente, dar o seu melhor nesse trabalho e sempre ser comprometido com o resultado.</p>
+        </div>
+    </div>
+
+    <script src="../scripts/valores.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Determinação</title>
+</head>
+<body>
+    <header>
+        <div class="temporizador"></div>
+        <h3>Valores J&F</h3>
+    </header>
+    
+    <form class="grupo" onsubmit="acertou()">
+        <div id="valor">
+            <img src="../images/determinacao.png" alt="determinação">
+            <h1>Determinação</h1>
+            <img src="../images/determinacao.png" alt="determinação">
+        </div>
+        
+        <p>É uma pessoa obstinada que faz as coisas acontecerem, busca alternativas para os problemas e engaja as pessoas em prol de um objetivo comum.</p>
+        <ul id="escolha">
+            <li id="a" class="correta" onclick="changeBorder(this)">Entrega resultados que vão além do esperado</li>
+            <li id="b" class="correta" onclick="changeBorder(this)">Está disposto a negociar as condições necessárias para alcançar suas metas</li>
+            <li id="c" class="errada" onclick="changeBorder(this)">Faz tudo de última hora</li>
+            <li id="d" class="correta" onclick="changeBorder(this)">Busca alternativas para solucionar os problemas</li>
+            <li id="e" class="errada" onclick="changeBorder(this)">Apenas deixa as coisas acontecerem</li>
+        </ul>
+        <button type="submit" id="botao" class="disponibilidade">Próximo</button>
+    </form>
+
+    <div class="overlay hidden" id="overlay">
+        <div class="overlay-content">
+            <div class="imagem hidden" id="falha">
+                <img src="../images/falha.png" alt="falha">
+            </div>
+            <div class="imagem hidden" id="sucesso">
+                <img src="../images/sucesso.png" alt="sucesso">
+            </div>
+            <p>Você está fazendo um projeto e, mesmo se sentindo cansado ou desmotivado, decide seguir em frente e continuar dando o seu melhor.</p>
+        </div>
+    </div>
+
+    <script src="../scripts/valores.js"></script>
+</body>
+</html>
