@@ -138,6 +138,24 @@ nav{
         padding: 20px;
     }
 
+    table {
+        width: 50%;
+        margin: 20px auto;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        color: black;
+    }
+
+    th {
+        background-color: #426B1F;
+        font-weight: bold;
+    }
+
     img{
         width: 60%;
     }

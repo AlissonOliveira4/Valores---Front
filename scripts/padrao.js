@@ -104,3 +104,52 @@ function updateUser(){
 
   fazPost(url, body);
 }
+
+//Ranking
+
+const apiUrl = "http://localhost:8080/valores/ranking";
+
+async function fetchRankingData() {
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error("Erro ao buscar os dados da API");
+        return await response.json();
+    } catch (error) {
+        console.error("Erro ao carregar os dados:", error);
+        return [];
+    }
+}
+
+async function renderRanking() {
+
+    const rankingData = await fetchRankingData();
+
+    const tableBody = document.querySelector("#ranking-table tbody");
+
+    tableBody.innerHTML = "";
+
+    rankingData.forEach((user, index) => {
+        const row = document.createElement("tr");
+
+        const positionCell = document.createElement("td");
+        positionCell.textContent = index + 1;
+
+        const nameCell = document.createElement("td");
+        nameCell.textContent = user.nome;
+
+        const pointsCell = document.createElement("td");
+        pointsCell.textContent = user.pontos;
+
+        const timeCell = document.createElement("td");
+        timeCell.textContent = user.tempo;
+
+        row.appendChild(positionCell);
+        row.appendChild(nameCell);
+        row.appendChild(pointsCell);
+        row.appendChild(timeCell);
+
+        tableBody.appendChild(row);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", renderRanking);

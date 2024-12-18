@@ -61,22 +61,28 @@
                 2° - Só pode selecionar no máximo 3 repostas de cada valor.<br><br>
                 3° - Digite seu apelido antes de ir para o jogo!<br><br>
                 4° - Não é permitido utilizar fontes externas, apenas o seu conhecimento.<br><br>
-                5° - É estritamente proibido o uso dO inspecionar das páginas do jogo!<br><br>
+                5° - É estritamente proibido o uso do inspecionar das páginas do jogo!<br><br>
                 6° - O jogo só tem 10 minutos, então seja rápido. <br>
             </p>
             <button class="closeOverlay">Fechar</button>
         </div>
     </div>
-
+    
     <div id="rankingOverlay" class="overlay hidden">
         <div class="overlay-content">
             <h3>Ranking</h3>
-            <p>
-                1° - Não sei<br><br>
-                2° - Sei<br><br>
-                3° - Não lembro<br><br>
-                4° - Certeza <br>
-            </p>
+            <table id="ranking-table">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Nome</th>
+                        <th>Pontos</th>
+                        <th>Tempo</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+                
             <button class="closeOverlay">Fechar</button>
         </div>
     </div>
