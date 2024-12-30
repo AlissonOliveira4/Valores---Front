@@ -16,7 +16,7 @@
         </div>
     </nav>
     <form class="principal" onsubmit="updateUser()">
-        <h1>Parabéns por ter finalizado o jogo!</h1>
+        <h1 id="titulo">Parabéns por ter finalizado o jogo!</h1>
         <h3 id="ponto"></h3>
         <div class="feedback hidden" id="perfeito">
             <p>Seu resultado foi excelente! Com incríveis 70 pontos</p>
@@ -85,6 +85,18 @@
                 
             <button class="closeOverlay">Fechar</button>
         </div>
+    </div>
+
+    <div class="share">
+        <a id="btn-twitter" href="#" target="_blank">
+            <img width="40" height="40" src="../images/twitter.png">
+        </a> 
+        <a id="btn-facebook" href="#" target="_blank">
+            <img width="50" height="50" src="../images/facebook.png">
+        </a>               
+        <a id="btn-whatsapp" href="#" target="_blank">
+            <img width="40" height="40" src="../images/whatsapp.png">
+        </a>    
     </div>
 
     <script src="../scripts/padrao.js"></script>

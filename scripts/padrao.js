@@ -8,21 +8,31 @@ ponto.textContent = `${pontos} pontos!`;
 
 if (pontos === 70){
     let feedback = document.getElementById("perfeito");
+    let mensagem = feedback.querySelector("p").innerHTML;
 
+    localStorage.setItem("mensagem", mensagem)
     feedback.classList.remove("hidden")
 } else if (pontos >= 50 && pontos < 70){
     let feedback = document.getElementById("bom");
+    let mensagem = feedback.querySelector("p").innerHTML;
 
+    localStorage.setItem("mensagem", mensagem)
     feedback.classList.remove("hidden")
 } else if (pontos >= 30 && pontos < 50){
     let feedback = document.getElementById("médio");
+    let mensagem = feedback.querySelector("p").innerHTML;
 
+    localStorage.setItem("mensagem", mensagem)
     feedback.classList.remove("hidden")
 }else{
     let feedback = document.getElementById("ruim");
+    let mensagem = feedback.querySelector("p").innerHTML;
 
+    localStorage.setItem("mensagem", mensagem)
     feedback.classList.remove("hidden")
 }
+
+console.log(localStorage.getItem("mensagem"))
 
 // Model
 
@@ -153,3 +163,40 @@ async function renderRanking() {
 }
 
 document.addEventListener("DOMContentLoaded", renderRanking);
+
+function atualizarLinksCompartilhamento(){
+
+    console.log("Atualizando links de compartilhamneto")
+
+	const titulo = document.getElementById("titulo").innerHTML;
+    const pontos = parseInt(document.getElementById("ponto").innerHTML);
+    const mensagem = localStorage.getItem("mensagem")
+    const urlPagina = "http://127.0.0.1:5500/Front/pages/index.html"; //url autal da página
+    
+    let textoCompartilhamento = "";
+
+    if (pontos >= 40){
+        textoCompartilhamento = `Acabei de jogar e consegui ${pontos} pontos! E você, consegue mais? 💪 #JogoValores \n`;
+    }else{
+        textoCompartilhamento = `Parece que preciso estudar mais! 😅 Eu fiz ${pontos} pontos. Você consegue fazer melhor? 💪 #JogoValores \n`;
+    }
+
+    console.log(textoCompartilhamento)
+
+    // Atualizar links dos botões
+    document.getElementById("btn-facebook").href =
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlPagina)}&quote=${encodeURIComponent(textoCompartilhamento)}`;
+
+    document.getElementById("btn-whatsapp").href =
+      `https://api.whatsapp.com/send?text=${encodeURIComponent(textoCompartilhamento + " " + urlPagina)}`;
+
+    document.getElementById("btn-twitter").href =
+      `https://twitter.com/intent/tweet?text=${encodeURIComponent(textoCompartilhamento)}&url=${encodeURIComponent(urlPagina)}`;
+  
+    console.log("links atualizados com sucesso")    
+}
+
+
+
+// Atualizar links ao carregar a página
+window.onload = atualizarLinksCompartilhamento;

@@ -36,6 +36,7 @@ nav{
         margin-right: 3%;
         align-items: center;
         flex-direction: row;
+        background-color: white;
 
         button{
             margin-left: 4%;
@@ -184,4 +185,22 @@ button{
     background-color: #11C76F;
     padding: 15px;
     border-radius: 15px;
+}
+
+.share{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-top: 20px;
+    gap: 20px;
+
+    #btn-facebook{
+        position: relative;
+        top: 5px;
+    }
+
+    #btn-twitter{
+        position: relative;
+        top: 2px;
+    }
 }
