@@ -153,6 +153,7 @@ const timerInterval = setInterval(() => {
     clearInterval(timerInterval);
     localStorage.removeItem("timer");
     alert("Tempo esgotado!");
+    window.location.href = "final.html";
     return;
   }
 
