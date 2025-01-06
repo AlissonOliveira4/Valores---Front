@@ -176,7 +176,7 @@ function atualizarLinksCompartilhamento(){
 	const titulo = document.getElementById("titulo").innerHTML;
     const pontos = parseInt(document.getElementById("ponto").innerHTML);
     const mensagem = localStorage.getItem("mensagem")
-    const urlPagina = "http://127.0.0.1:5500/Front/pages/index.html"; //url autal da página
+    const urlPagina = "https://valores-front.onrender.com"; //url autal da página
     
     let textoCompartilhamento = "";
 
