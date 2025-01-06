@@ -34,7 +34,7 @@ closeButtons.forEach(button => {
     });
 });
 
-const apiUrl = "http://localhost:8080/valores/ranking";
+const apiUrl = "https://valores-back.onrender.com/valores/ranking";
 
 async function fetchRankingData() {
     try {

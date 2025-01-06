@@ -24,7 +24,7 @@ function fazPost(url, body){
 
 function saveUser(){
   event.preventDefault();
-  let url = "http://localhost:8080/valores/create-user";
+  let url = "https://valores-back.onrender.com/valores/create-user";
   let nome = document.getElementById("nome").value;
 
   console.log(nome);

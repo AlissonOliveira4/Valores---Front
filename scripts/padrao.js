@@ -87,7 +87,7 @@ function fazPost(url, body){
 
 function updateUser(){
   event.preventDefault();
-  let url = `http://localhost:8080/valores/update-user?nome=${localStorage.getItem("nome")}`;
+  let url = `https://valores-back.onrender.com/valores/update-user?nome=${localStorage.getItem("nome")}`;
   console.log(url)
 
   console.log(localStorage.getItem("nome"));
@@ -99,8 +99,13 @@ function updateUser(){
   console.log(tempoObj)
 
   let horas = 0;
-  let minutos = tempoObj.minutes;
-  let segundos = tempoObj.seconds;
+  let minutos = 0;
+  let segundos = 0;
+
+if (tempoObj !== null){
+    let minutos = tempoObj.minutes;
+    let segundos = tempoObj.seconds;  
+}
 
   let tempoFormatado = `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
 
@@ -117,7 +122,7 @@ function updateUser(){
 
 //Ranking
 
-const apiUrl = "http://localhost:8080/valores/ranking";
+const apiUrl = "https://valores-back.onrender.com/valores/ranking";
 
 async function fetchRankingData() {
     try {
