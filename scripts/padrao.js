@@ -70,7 +70,7 @@ closeButtons.forEach(button => {
     });
 });
 
-function fazPost(url, body){
+function fazPut(url, body){
     console.log(body);
 
     let request = new XMLHttpRequest();
@@ -95,8 +95,6 @@ function updateUser(){
   console.log(localStorage.getItem("timer"))
 
   let tempoObj = JSON.parse(localStorage.getItem("timer"));
-  
-  console.log(tempoObj)
 
   const horas = 0;
   let minutos = 0;
@@ -117,7 +115,7 @@ if (tempoObj !== null){
         "tempo": tempoFormatado
   };
 
-  fazPost(url, body);
+  fazPut(url, body);
 }
 
 //Ranking
