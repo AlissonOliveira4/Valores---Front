@@ -98,13 +98,13 @@ function updateUser(){
   
   console.log(tempoObj)
 
-  let horas = 0;
+  const horas = 0;
   let minutos = 0;
   let segundos = 0;
 
 if (tempoObj !== null){
-    let minutos = tempoObj.minutes;
-    let segundos = tempoObj.seconds;  
+    minutos = tempoObj.minutes;
+    segundos = tempoObj.seconds;  
 }
 
   let tempoFormatado = `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
