@@ -34,7 +34,7 @@ closeButtons.forEach(button => {
     });
 });
 
-const apiUrl = "https://valores-back.onrender.com/valores/ranking";
+const apiUrl = "https://valores-back.onrender.com/user/ranking";
 
 async function fetchRankingData() {
     try {

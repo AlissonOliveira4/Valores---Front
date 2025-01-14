@@ -87,7 +87,7 @@ function fazPut(url, body){
 
 function updateUser(){
   event.preventDefault();
-  let url = `https://valores-back.onrender.com/valores/update-user?nome=${localStorage.getItem("nome")}`;
+  let url = `https://valores-back.onrender.com/user/update-user?nome=${localStorage.getItem("nome")}`;
   console.log(url)
 
   console.log(localStorage.getItem("nome"));
@@ -120,7 +120,7 @@ if (tempoObj !== null){
 
 //Ranking
 
-const apiUrl = "https://valores-back.onrender.com/valores/ranking";
+const apiUrl = "https://valores-back.onrender.com/user/ranking";
 
 async function fetchRankingData() {
     try {
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", renderRanking);
 
 function atualizarLinksCompartilhamento(){
 
-    console.log("Atualizando links de compartilhamneto")
+    console.log("Atualizando links de compartilhamento")
 
 	const titulo = document.getElementById("titulo").innerHTML;
     const pontos = parseInt(document.getElementById("ponto").innerHTML);
